@@ -1,0 +1,149 @@
+
+body {
+  display: flex;
+  padding: 0 35px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+ 
+}
+.wrapper {
+  max-width: 1080px;
+  width: 100%;
+  position: relative;
+}
+.wrapper i {
+  top: 45%;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px 2px rgba(0,0,0,0.23);
+  transform: translateY(-60%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active{
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child{
+  left: -52px;
+}
+.wrapper i:last-child{
+  right: -52px;
+}
+.wrapper .carousel{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 8px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card {
+  scroll-snap-align: start;
+  height: 80%;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  
+  flex-direction: column;
+  border-radius: 8px;
+}
+.carousel .card .img {
+ /* background: #8B53FF;
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;*/
+
+}
+.card .img img {
+  max-width: 110%;
+    max-height: 80%;
+  border-radius: 5%;
+  object-fit: cover;
+  border: 4px 4px 4px 4px rgba(0,0,0,0.23);
+}
+.carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+}
+.carousel .card span {
+  color: #6A6D78;
+  font-size: 1.31rem;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+
+/* css para carousel de pin diseño 2 */
+/*
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .card img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .card {
+    margin: 0 0.5em;
+    box-shadow: 5px 6px 5px 5px rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 0;
+  }
+  .carousel-inner {
+    padding: 1em;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: #e1e1e1;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @media (min-width: 768px) {
+    .card img {
+      height: 11em;
+    }*/
+  }
+
+  
