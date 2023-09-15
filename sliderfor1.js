@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     const wrapper = document.querySelector(".wrapper");
-    const carousel = document.querySelector(".carousel");
+    const carousel = document.querySelector(".carousel2");
   
     // Verifica si se encontró el elemento .carousel antes de continuar
     if (carousel) {
